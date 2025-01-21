@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    scroll-behavior: smooth;
+}
+
+details[open] summary {
+    background-color: #4a5568;
+    /* Ubah warna saat terbuka */
+}
+
+details div {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    margin-bottom: 8px;
+    width: 100%;
+    background-color: #4a5568;
+    color: white;
+    border-radius: 4px;
+    z-index: 10;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
